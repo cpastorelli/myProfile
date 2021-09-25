@@ -8,9 +8,9 @@
 
         <title>Caroline's Profile</title>
 
-        <link rel="icon" href=""/>
+        <link rel="icon" href="./assets/heart-favicon.ico"/>
 
-        <link rel="stylesheet" href="./style.css" />
+        <link rel="stylesheet" href="./assets/style.css" />
 
         <meta name="viewport" content="width= device-width, initial-scale= 1.0" />
     </head>
@@ -18,51 +18,59 @@
     <body>
 
         <header>
+            <!--my name -->
+            <section class="intro">
 
-            <h1>Caroline Pastorelli</h1>
+                <h1>Caroline Pastorelli</h1>
+                <!--navigation links-->
+                <nav class="menu">
+                    <ul>
 
-            //list-style-type: none; (CSS) Removes bullets from ul
-            <nav>
-                <ul>
+                        <li><a href="#about-me">About Me</a></li>
+                    </ul>
 
-                    <li><a href="">About Me🙋‍♀️</a></li>
-                </ul>
+                    <ul>
 
-                <ul>
+                        <li><a href="#my-work">My Work</a></li>
+                    </ul>
 
-                    <li><a href="">My Work🛠</a></li>
-                </ul>
+                    <ul>
 
-                <ul>
-
-                    <li><a href="">Contact Me ✨</a></li>
-                </ul>
-                
-            </nav>
+                        <li><a href="#contact-links">Contact Me </a></li>
+                    </ul>
+                </nav>
+            </section>   
         </header>
 
         <hr />
 
         <main>
+            <!--about me-->
+            <section id="about-me" class="about-me">
 
-            <section>
+                <h3>About Me</h3>
 
                 <figure>
 
-                    <img />
-
-                    <figcaption>
-
-                    </figcaption>
+                    <img src="./assets/personal-Photo-Cropped.jpg" alt="Picture of me! The owner of the page."/>
                 </figure>
 
-                <p></p>
-
+                <p>Hello there! My name is Caroline, and  I am currently attending the UCSD Extention bootcamp for Full-Stack Web Development. 
+                    I am originally from the UK, however I moved to San Diego, when I was a small child.
+                    I have many loves in my life, from horror movies to rock concerts, pizza to sushi, and my dog Bowie, he is a 10 year old husky.
+                     My favorite color is <span style="color:darkred" >dark red</span>. 
+                     I love going on hikes, scuba diving, and baking desserts. My favorite holiday is Halloween. My favorite animal is a penguin (I find them to be so cute),
+                    and I am afraid of anything that has more than 4 legs (Curse you spiders).  I have travelled to Italy, England, Japan and Russia. An item on my bucket list is to see the Northern Lights. 
+                    
+                </p>
             </section>
 
-            <section>
-                //tiles with content links.
-                //
+            <hr>
+            <!--My Work-->
+            <section id="my-work">
+                <!--tiles with content links.-->
+                <h3>My Work</h3>
+                
             </section>
 
         </main>
@@ -71,22 +79,26 @@
 
         <footer>
 
-            <h3>Contact Me:</h3>
+            <!--Contact me-->
+            <section id= "contact-links" class="contact-links" >
 
-            <ul>
+                <h3>Contact Me</h3>
+                <!--Contact Links-->
+                <ul id="left-link">
+                    <li><a href="https://github.com/cpastorelli/" target="_blank">My Github Website</a></li>
+                    
+                </ul>
 
-                <li><a href="">Phone:</a></li>
-            </ul>
+                <ul id="center-link">
+                    
+                    <li><a href="mailto:caroline.pastorelli@gmail.com">My Work E-mail</a></li>
+                </ul>
 
-            <ul>
-
-                <li><a href="">Email:</a></li>
-            </ul>
-
-            <ul>
-
-                <li><a href="">Website:</a></li>
-            </ul>
+                <ul id="right-link">
+                    <!--This is not my actual Phone number-->
+                    <li><a href="tel:+123456789">My Work Phone</a></li>
+                </ul>
+            </section>
         </footer>
     </body>
 </html>

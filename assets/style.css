@@ -1,0 +1,140 @@
+
+/*The default settings for the entire document*/
+* {
+
+    list-style: none; /*Remove any default styling on list items*/
+
+    text-decoration: none; /*Remove any default styling on text elements*/
+    
+    font: normal normal 100%/1.5 sans-serif; /*font shorthand for: style:normal, Variant: no set, Weight:normal, Stretch: no set, Size: 100% (16px), Height:1.5x, Family: sans-serif */
+    
+    letter-spacing: .03vw; /* added less than .03 of letter spacing for view width*/
+    
+    box-sizing: border-box; /*content area, border, and padding will fit inside of parent element*/
+
+    
+}
+
+header {
+
+}
+
+body {
+    background: linear-gradient(55deg, rgb(0, 0, 0), rgb(216, 11, 11));
+}
+
+
+/*This will be set in every section*/
+body section{
+
+    border: medium ridge rgb(138, 138, 138); /* border shorthand for: Width: medium, Style: ridge, Color: RGB 138, 138, 138*/
+
+    font-size: 2vh;
+
+    animation: change-color 7s infinite;  /* */
+
+    padding: 2vh 2vw;
+
+}
+
+/**/
+@keyframes change-color {
+
+    0% {
+        background-color: #b2bcdd;
+    }
+    33% { 
+        background-color: #ced1fc;
+    }
+    66% {
+        background-color: #eee7df;
+    }
+    100% {
+        background-color: #b2bcdd;
+    }
+}
+
+.intro {
+ 
+}
+
+/**/
+.intro h1 {
+
+    text-align: center;
+
+    font-size: 4vh; /*Element will take around 3.5% of window height*/
+
+    font-weight: bolder;
+    
+    margin: 0;
+
+    position: relative; /*Allows the header to stay above the navigation links*/
+}
+
+/*Setting parent container settings for navigational links*/
+.intro nav {
+
+    display: flex; /*Navigational links will show horizontally*/
+
+    justify-content: space-evenly;/* each element withinin nav container will have equal space around themselves.*/
+}
+
+/*Setting color and font size for any anchor tag within a list item*/
+li a{
+
+    color: rgb(0, 0, 0);
+    
+    font-size: 2.5vh;
+}
+
+/*li::before {
+}
+*/
+
+
+/**/
+.about-me {
+   display: inline-block;
+}
+
+/**/
+img {
+    max-width: 20vh;
+    height: auto;
+    padding: 0 3vh 3vw 0;
+    float: left;
+}
+
+/**/
+h3 {
+    text-align: center;
+    font-size: 2.9vh;
+    font-weight:bold;
+}
+
+.contact-links {
+    display: flex;
+    flex-direction:column;  
+}
+
+#left-link {
+    align-self:flex-start;
+}
+
+#center-link {
+    align-self:center;
+}
+
+#right-link {
+    align-self:flex-end;
+}
+
+/*
+section.contact-links {
+
+}
+
+*/
+
+
