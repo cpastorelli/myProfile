@@ -1,4 +1,3 @@
-
 /*The default settings for the entire document*/
 * {
 
@@ -13,23 +12,25 @@
     box-sizing: border-box; /*content area, border, and padding will fit inside of parent element*/
 }
 
+/*Adding a linear gradient for the background of the webpage*/
 body {
     background: linear-gradient(55deg, rgb(0, 0, 0), rgb(216, 11, 11));
 }
 
-/*This will be set in every section*/
+/*for each section within the body, there will be a a border, padding and animation, */
 body section{
+    font-size: 2vh;
 
     border: medium ridge rgb(138, 138, 138); /* border shorthand for: Width: medium, Style: ridge, Color: RGB 138, 138, 138*/
 
-    font-size: 2vh;
+    padding: 2vh 2vw;
+
+    overflow: auto; /*prevents image from overflowing beyond section (parent) container since it is a float*/
 
     animation: change-color 7s infinite;  /* */
-
-    padding: 2vh 2vw;
 }
 
-/**/
+/*changing the background color within each section on a 7s loop*/
 @keyframes change-color {
 
     0% {
@@ -46,75 +47,21 @@ body section{
     }
 }
 
-/**/
-.intro h1 {
+/*Settings of H1 element*/
+h1 {
 
     text-align: center; /*test*/
 
     font-size: 4vh; /*Element will take around 3.5% of window height*/
 
     font-weight: bolder;
-    
-    margin: 0; /*test*/
 
     position: relative; /*Allows the header to stay above the navigation links*/
+
+    margin: 0; /*test*/
 }
 
-/*Setting parent container settings for navigational links*/
-.intro nav {
-
-    display: flex; /*Navigational links will show horizontally*/
-    
-    justify-content: space-around;/* each element withinin nav container will have equal space around themselves.*/
-
-    margin: 0;
-
-    padding: 0;
-
-    border: 0;
-    
-    overflow: hidden; /* prevents list elementsfrom going outside of the list*/
-}
-
-/*Setting color and font size for any anchor tag within a list item*/
-li a{
-    
-    border-radius: 15%;
-    
-    color: rgb(0, 0, 0);
-    
-    font-size: 2.5vh;
-    transition: color 1s;
-    transition: background 2s;
-    
-}
-
-/**/
-li a:hover {
-    text-align: center;
-
-    font-weight: bolder;
-    
-    background: rgb(59, 59, 59);
-    
-    color: rgb(255, 255, 255);
-
-    font-size: 3vh;
-}
-
-/**/
-img {
-
-    max-width: 20vh;
-
-    height: auto;
-
-    padding: 0 3vh 3vw 0;
-
-    float: left;
-}
-
-/**/
+/*Heading 3 element settings*/
 h3 {
 
     text-align: center;
@@ -124,7 +71,58 @@ h3 {
     font-weight: bold;
 }
 
-/**/
+/*Setting nav as parent container as flexbox, removing any padding, border, and margin*/
+nav {
+
+    display: flex; /*Navigational links will show horizontally*/
+    
+    justify-content: space-around;/* each element withinin nav container will have equal space around themselves.*/
+
+    margin-left: -4vw; /*reduce margin to minimize space from container edge*/
+
+    padding: 0;
+
+    border: 0;
+    
+    overflow: hidden; /* prevents list elements from going outside of the list*/
+}
+
+/*Setting font size, color for anchor tags withing lists. Rounding corners of border edge.*/
+li a{
+    
+    color: rgb(0, 0, 0);
+    
+    font-size: 2.5vh;
+
+    border-radius: 15%;
+
+    transition: color 1s, background 2s;
+}
+
+/*Pseudo-class hover will change font weight, color, size and background image. transitions will go into effect */
+li a:hover {
+    color: rgb(255, 255, 255);
+
+    font-size: 3vh;
+
+    font-weight: bolder;
+    
+    background: rgb(59, 59, 59);
+}
+
+/*Image Settings*/
+img {
+
+    max-height: 15vh; /* Maximum height is 20 viewport height*/
+    
+    width: auto;
+    
+    padding: 0 2vw 1vh 0;
+
+    float: left; /*Allows text to wrap around image*/
+}
+
+/*my work class container, flexbox parent, child items show in row, and horizontal spacing is equal all around  child elements*/
 .my-work {
 
     display: flex;
@@ -136,25 +134,25 @@ h3 {
     column-count: 3;
 }
 
-/**/
+/* ul margin and padding set to 0, border will be dotted red with */
 .my-work ul {
 
     margin: 0;
 
     padding: 0;
 
-    border: .3vh dotted rgb(134, 0, 0);
+    border: .5vh dotted rgb(134, 0, 0);
 
     transition: border 1s;
 
 }
 
-/**/
+/* transition will go in effect when hovering over links*/
 .my-work ul:hover {
     border: .4vh ridge #0000;
 }
 
-/**/
+/*footer container settings*/
 footer {
 
     margin: 0;
@@ -162,7 +160,7 @@ footer {
     padding: 0;
 }
 
-/**/
+/*class container will be set as flexbox parent, with each item set in columns, no margin, no padding.*/
 .contact-links {
 
     display: flex;
@@ -174,22 +172,26 @@ footer {
     padding: 0; 
 }
 
-/**/
+/*flexbox child will be set at top left corner of container*/
 #left-link {
 
     align-self: flex-start;
+
+    margin-left: -2vw;
 }
 
-/**/
+/*flexbox child will be set in center of container*/
 #center-link {
 
     align-self: center;
 }
 
-/**/
+/*flexbox child will be set at bottom right of container*/
 #right-link {
 
     align-self: flex-end;
+
+    padding-right: 4vw; /* adjust location of link to have some padding away from the container edge*/
 }
 
 
