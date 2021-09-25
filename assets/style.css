@@ -11,18 +11,11 @@
     letter-spacing: .03vw; /* added less than .03 of letter spacing for view width*/
     
     box-sizing: border-box; /*content area, border, and padding will fit inside of parent element*/
-
-    
-}
-
-header {
-
 }
 
 body {
     background: linear-gradient(55deg, rgb(0, 0, 0), rgb(216, 11, 11));
 }
-
 
 /*This will be set in every section*/
 body section{
@@ -34,7 +27,6 @@ body section{
     animation: change-color 7s infinite;  /* */
 
     padding: 2vh 2vw;
-
 }
 
 /**/
@@ -47,27 +39,23 @@ body section{
         background-color: #ced1fc;
     }
     66% {
-        background-color: #eee7df;
+        background-color: #d4e2bd;
     }
     100% {
         background-color: #b2bcdd;
     }
 }
 
-.intro {
- 
-}
-
 /**/
 .intro h1 {
 
-    text-align: center;
+    text-align: center; /*test*/
 
     font-size: 4vh; /*Element will take around 3.5% of window height*/
 
     font-weight: bolder;
     
-    margin: 0;
+    margin: 0; /*test*/
 
     position: relative; /*Allows the header to stay above the navigation links*/
 }
@@ -76,65 +64,134 @@ body section{
 .intro nav {
 
     display: flex; /*Navigational links will show horizontally*/
+    
+    justify-content: space-around;/* each element withinin nav container will have equal space around themselves.*/
 
-    justify-content: space-evenly;/* each element withinin nav container will have equal space around themselves.*/
+    margin: 0;
+
+    padding: 0;
+
+    border: 0;
+    
+    overflow: hidden; /* prevents list elementsfrom going outside of the list*/
 }
 
 /*Setting color and font size for any anchor tag within a list item*/
 li a{
-
+    
+    border-radius: 15%;
+    
     color: rgb(0, 0, 0);
     
     font-size: 2.5vh;
 }
 
-/*li::before {
-}
-*/
-
-
 /**/
-.about-me {
-   display: inline-block;
+li a:hover {
+    text-align: center;
+
+    font-weight: bolder;
+    
+    background: rgb(63, 63, 63);
+    
+    color: rgb(255, 255, 255);
+
+    font-size: 3vh;
 }
 
 /**/
 img {
+
     max-width: 20vh;
+
     height: auto;
+
     padding: 0 3vh 3vw 0;
+
     float: left;
 }
 
 /**/
 h3 {
+
     text-align: center;
+
     font-size: 2.9vh;
-    font-weight:bold;
+
+    font-weight: bold;
 }
 
-.contact-links {
+/**/
+.my-work {
+
     display: flex;
-    flex-direction:column;  
+
+    flex-direction: row;
+
+    justify-content: space-around;
+
+    column-count: 3;
 }
 
+/**/
+.my-work ul {
+
+    margin: 0;
+
+    padding: 0;
+
+    border: .3vh dotted rgb(134, 0, 0);
+
+    background: linear-gradient(100deg green, black);
+}
+
+/**/
+.my-work ul:hover {
+
+    text-align: center;
+
+    font-size: 2.5vh;
+
+    background: rgb(59, 59, 59);
+}
+
+/**/
+footer {
+
+    margin: 0;
+
+    padding: 0;
+}
+
+/**/
+.contact-links {
+
+    display: flex;
+
+    flex-direction: column; 
+
+    margin: 0;
+
+    padding: 0; 
+}
+
+/**/
 #left-link {
-    align-self:flex-start;
+
+    align-self: flex-start;
 }
 
+/**/
 #center-link {
-    align-self:center;
+
+    align-self: center;
 }
 
+/**/
 #right-link {
-    align-self:flex-end;
+
+    align-self: flex-end;
 }
 
-/*
-section.contact-links {
-
-}
-
-*/
 
 
