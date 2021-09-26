@@ -10,12 +10,15 @@
     letter-spacing: .03vw; /* added less than .03 of letter spacing for view width*/
     
     box-sizing: border-box; /*content area, border, and padding will fit inside of parent element*/
+
+    overflow-wrap: break-word;
 }
 
 /*Adding a linear gradient for the background of the webpage*/
 body {
     animation: change-color 7s infinite;  
 }
+
 /*changing the background color within each section on a 7s loop*/
 @keyframes change-color {
 
@@ -33,9 +36,9 @@ body {
     }
 }
 
-/*for each section within the body, there will be a a border, padding and animation, */
+/*for each section within the body, there will be a border, padding */
 body section {
-    font-size: 2vh;
+    font-size: 2.4vh;
     
     display: flex;
     
@@ -43,14 +46,11 @@ body section {
 
     border: medium ridge rgb(138, 138, 138); /* border shorthand for: Width: medium, Style: ridge, Color: RGB 138, 138, 138*/
     
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255); /*set background for each section to white*/
 }
-
-
 
 /*Settings of H1 element*/
 h1 {
-
     text-align: left; 
 
     font-size: 4.5vh; /*Element will take around 3.5% of window height*/
@@ -62,19 +62,8 @@ h1 {
     margin: 0; 
 }
 
-/*Heading 3 element settings*/
-h3 {
-
-    font-size: 3.5vh;
-
-    font-weight: bold;
-
-    width: 30%;
-}
-
-/*Setting nav as parent container as flexbox, removing any padding, border, and margin*/
- nav {
-
+/*Setting nav as parent container as flexbox*/
+nav {
     display: inherit; /*Navigational links will show horizontally*/
     
     justify-content: space-around;/* each element withinin nav container will have equal space around themselves.*/  
@@ -82,21 +71,22 @@ h3 {
     width: 50%;
 }
 
+
 /*Setting font size, color for anchor tags withing lists. Rounding corners of border edge.*/
-li a{
+li a{   
     color: rgb(0, 0, 0);
     
     font-size: 2.7vh;
 
     border-radius: 15%;
 
-    margin-right:5vw;
+    margin-right: 5vw;
 
     transition: color 1s, background 2s;
 }
 
 /*Pseudo-class hover will change font weight, color, size and background image. transitions will go into effect */
-li a:hover {
+.links li a:hover, .menu li a:hover {
     color: rgb(255, 255, 255);
 
     font-size: 3.2vh;
@@ -104,37 +94,72 @@ li a:hover {
     font-weight: bolder;
   
     background: rgb(59, 59, 59);
+
+    
 }
 
-/*Image Settings*/
-img {
-   float:left;
+/*Heading 3 element settings*/
+h3 {
+    font-size: 3.5vh;
 
-   width: 15vw;
+    font-weight: bold;
 
-   height:15vh;
+    width: 30%;
 
-   object-fit: cover;
+    margin-right: 2vw;
 }
 
+/*Text  element orientation*/
+.about-me p{
+    width: 70%;
+
+    text-align: justify;
+
+    padding: 2vw;
+}
+
+/*Setting Flexbox parent for my work image anchors */
+.tiles {
+    display: flex;
+
+    justify-content: center;
+
+    text-align: center;
+}
+
+
+
+/*Anchor Image settings*/
+a img {
+    display: block; /*centers image with text in list item*/
+
+    width: 15vw;
+
+    height: 15vh;
+
+    object-fit: cover; /*image fits within set size, and changes what is shown at different viewports*/
+}
+
+/*Pseudo-class hover will increase height and width of image while adding an opacity*/
 a img:hover {
     width: 25vw;
+
     height: 25vh;
+
     opacity: .7;
 }
 
+/*footer links */
 .links {
-    width: 70%;
+    width:70%;
 
-    max-height:30%;
-
-    display:flex;
+    display: flex;
 
     justify-content: space-around;
 
-    align-items:center;
+    align-content: center;
+
+    align-items: center;
 
     margin-right: 2vw;
-    overflow:hidden;
 }
-
