@@ -2,7 +2,7 @@
 
 ## About This Project
 
-![myProfilePage](./assets.images/profilepage.png)
+![myProfilePage](./assets/images/profilepage.png)
 
 I worked on this project to practice flexbox, play with what I can do with pseudo-classes, and how to work with keyframes. I was able come up with and test many different aspects of how to format the site, practice with formatting different elements within their parent containers, and hit walls on what I was able to do. I did a LOT of googling, but I listed the sites that were fundamental to me making the site what it is. I know that I will have some further issues as I try to expand upon this project in the future, however I am very excited to try and make this site more usable and expand my knowledge more!
 
