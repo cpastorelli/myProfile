@@ -189,7 +189,7 @@ a img:hover {
         font-size: 3.5vw;
     }
 
-    .links {
+    .menu {
         flex-flow: row wrap;
     }
 }
