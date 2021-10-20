@@ -166,6 +166,7 @@ a img:hover {
     margin-right: 2vw;
 }
 
+/* changing settings when screen is smaller than 450px */
 @media only screen and (max-width: 28.125em) {
     * {
         letter-spacing: 0;
