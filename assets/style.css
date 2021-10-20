@@ -188,4 +188,8 @@ a img:hover {
     h3 {
         font-size: 3.5vw;
     }
+
+    .links {
+        flex-flow: row wrap;
+    }
 }
