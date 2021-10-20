@@ -163,3 +163,29 @@ a img:hover {
 
     margin-right: 2vw;
 }
+
+@media only screen and (maz-width: 90em) {
+    * {
+        letter-spacing: 0;
+    }
+
+    body section {
+        font-size: 2.4vw;
+    }
+    
+    h1 {
+        font-size: 4.5vw;
+    }
+
+    li a {
+        font-size: 2.7vw;
+    }
+
+    li a:hover {
+        font-size: 3.2vw;
+    }
+
+    h3 {
+        font-size: 3.5vw;
+    }
+}
