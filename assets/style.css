@@ -164,7 +164,7 @@ a img:hover {
     margin-right: 2vw;
 }
 
-@media only screen and (maz-width: 90em) {
+@media only screen and (max-width: 90em) {
     * {
         letter-spacing: 0;
     }
@@ -174,7 +174,7 @@ a img:hover {
     }
     
     h1 {
-        font-size: 4.5vw;
+        font-size: 4.0vw;
     }
 
     li a {
@@ -190,6 +190,6 @@ a img:hover {
     }
 
     .menu {
-        flex-flow: row wrap;
+        flex-flow: column wrap;
     }
 }
