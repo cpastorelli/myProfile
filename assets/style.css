@@ -119,6 +119,11 @@ h3 {
 
     padding: 2vw;
 }
+.about-me img {
+    width: 15vw;
+    height: 15vw;
+ 
+}
 
 /*Setting Flexbox parent for my work image anchors */
 .tiles {
