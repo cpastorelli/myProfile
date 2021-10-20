@@ -42,6 +42,8 @@ body section {
     
     display: flex;
     
+    justify-items: center;
+
     overflow: hidden; /*prevents image from overflowing beyond section (parent) container since it is a float*/
 
     border: medium ridge rgb(138, 138, 138); /* border shorthand for: Width: medium, Style: ridge, Color: RGB 138, 138, 138*/
@@ -86,7 +88,7 @@ li a{
 }
 
 /*Pseudo-class hover will change font weight, color, size and background image. transitions will go into effect */
-.links li a:hover, .menu li a:hover {
+.links li a:hover, .menu li a:hover, .tiles li a:hover {
     color: rgb(255, 255, 255);
 
     font-size: 3.2vh;
@@ -142,9 +144,9 @@ a img {
 
 /*Pseudo-class hover will increase height and width of image while adding an opacity*/
 a img:hover {
-    width: 25vw;
+    width: 20vw;
 
-    height: 25vh;
+    height: 20vh;
 
     opacity: .7;
 }
@@ -164,32 +166,45 @@ a img:hover {
     margin-right: 2vw;
 }
 
-@media only screen and (max-width: 90em) {
+@media only screen and (max-width: 28.125em) {
     * {
         letter-spacing: 0;
     }
 
     body section {
-        font-size: 2.4vw;
+        font-size: 3.0vw;
     }
     
     h1 {
-        font-size: 4.0vw;
+        font-size: 5vw;
     }
 
     li a {
-        font-size: 2.7vw;
+        font-size: 3.2vw;
     }
 
-    li a:hover {
-        font-size: 3.2vw;
+    .links li a:hover, .menu li a:hover {
+        font-size: 3.5vw;
+
+        width: 15vw;
+
+        height: auto;
+
     }
 
     h3 {
         font-size: 3.5vw;
     }
 
-    .menu {
+    .menu, .links, .tiles {
         flex-flow: column wrap;
+        overflow-wrap: none;
+        width: 70%;
+
+    }
+
+    .tiles ul {
+        align-self: center;
+        justify-self: center;
     }
 }

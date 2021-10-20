@@ -22,8 +22,8 @@ The pseudo-class hover was a blast to work with! I played with image sizes, text
 - Coffee (Thanks Nespresso!)
 
 ### Contact 
-project link: (https://cpastorelli.github.io/myProfile/)
-profile link: (https://cpastorelli.github.io)
+- project link: (https://cpastorelli.github.io/myProfile/)
+- profile link: (https://cpastorelli.github.io)
 
 ## Acknowledgements
 - [Hex Color Codes](https://www.color-hex.com/)
