@@ -38,3 +38,4 @@ The pseudo-class hover was a blast to work with! I played with image sizes, text
 - [IMG_Rain_Drop](https://www.pexels.com/photo/water-droplet-digital-wallpaper-1100946/)
 - [Image-resizing](https://stackoverflow.com/questions/19414856/how-can-i-make-all-images-of-different-height-and-width-the-same-via-css)
 - [Centering-image-in-list-item](https://stackoverflow.com/questions/29848553/how-to-center-image-in-li-elements)
+- [ForEach](https://dmitripavlutin.com/foreach-iterate-array-javascript/)

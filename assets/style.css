@@ -2,21 +2,26 @@
 * {
 
     list-style: none; /*Remove any default styling on list items*/
-
     text-decoration: none; /*Remove any default styling on text elements*/
-    
-    font: normal normal 100%/1.5 sans-serif; /*font shorthand for: style:normal, Variant: no set, Weight:normal, Stretch: no set, Size: 100% (16px), Height:1.5x, Family: sans-serif */
-    
+    font: normal normal 100%/1.5 sans-serif; /*font shorthand for: style:normal, Variant: no set, Weight:normal, Stretch: no set, Size: 100% (16px), Height:1.5x, Family: sans-serif */ 
     letter-spacing: .03vw; /* added less than .03 of letter spacing for view width*/
-    
     box-sizing: border-box; /*content area, border, and padding will fit inside of parent element*/
-
     overflow-wrap: break-word;
 }
 
 /*Adding a linear gradient for the background of the webpage*/
 body {
     animation: change-color 7s infinite;  
+}
+
+/*for each section within the body, there will be a border, padding */
+body section {
+    font-size: 2.4vh;
+    display: flex;
+    justify-items: center;
+    overflow: hidden; /*prevents image from overflowing beyond section (parent) container since it is a float*/
+    border: medium ridge rgb(138, 138, 138); /* border shorthand for: Width: medium, Style: ridge, Color: RGB 138, 138, 138*/
+    background-image: linear-gradient(to bottom right, rgb(128, 136, 146), rgb(221, 248, 250)); /*set background for each section to white*/
 }
 
 /*changing the background color within each section on a 7s loop*/
@@ -36,139 +41,101 @@ body {
     }
 }
 
-/*for each section within the body, there will be a border, padding */
-body section {
-    font-size: 2.4vh;
-    
-    display: flex;
-    
-    justify-items: center;
-
-    overflow: hidden; /*prevents image from overflowing beyond section (parent) container since it is a float*/
-
-    border: medium ridge rgb(138, 138, 138); /* border shorthand for: Width: medium, Style: ridge, Color: RGB 138, 138, 138*/
-    
-    background-color: rgb(255, 255, 255); /*set background for each section to white*/
-}
-
 /*Settings of H1 element*/
 h1 {
     text-align: left; 
-
     font-size: 4.5vh; /*Element will take around 3.5% of window height*/
-
     font-weight: bolder;
-
     width: 40%;
-
     margin: 0; 
-}
-
-/*Setting nav as parent container as flexbox*/
-nav {
-    display: inherit; /*Navigational links will show horizontally*/
-    
-    justify-content: space-around;/* each element withinin nav container will have equal space around themselves.*/  
-
-    width: 50%;
 }
 
 
 /*Setting font size, color for anchor tags withing lists. Rounding corners of border edge.*/
 li a{   
     color: rgb(0, 0, 0);
-    
     font-size: 2.7vh;
-
     border-radius: 15%;
-
-    margin-right: 5vw;
-
+    font-weight:bbold;
     transition: color 1s, background 2s;
 }
 
-/*Pseudo-class hover will change font weight, color, size and background image. transitions will go into effect */
-.links li a:hover, .menu li a:hover, .tiles li a:hover {
-    color: rgb(255, 255, 255);
-
-    font-size: 3.2vh;
-
-    font-weight: bolder;
+/*links */
+.links {
+    display: table;
+    width: 70%;
+}
   
-    background: rgb(59, 59, 59);
+.links ul {
+    display: flex;
+    height: 100%;
+    text-align: center;
+    justify-content: space-around;
+}
 
-    
+/*Pseudo-class hover will change font weight, color, size and background image. transitions will go into effect */
+.links li a:hover {
+    color: rgb(255, 255, 255);
+    font-size: 3.0vh;
+    font-weight: bolder;
+    background: rgb(59, 59, 59);
 }
 
 /*Heading 3 element settings*/
 h3 {
     font-size: 3.5vh;
-
     font-weight: bold;
-
-    width: 30%;
-
+    width: 20%;
+    height:100%;
     margin-right: 2vw;
 }
 
 /*Text  element orientation*/
 .about-me p{
-    width: 70%;
-
+    width: 75%;
     text-align: justify;
-
     padding: 2vw;
 }
+
 .about-me img {
     width: 15vw;
     height: 15vw;
- 
 }
 
-/*Setting Flexbox parent for my work image anchors */
 .tiles {
-    display: flex;
-
-    justify-content: center;
-
+    display: grid;
+    text-align: center;
+    align-content: center;
+    width: 70%;
+    grid-template-columns: repeat(3,1fr);
+    grid-auto-rows:110px;
+    gap: 1%;
+    justify-content:flex-start;
     text-align: center;
 }
-
-
-
-/*Anchor Image settings*/
-a img {
-    display: block; /*centers image with text in list item*/
-
-    width: 15vw;
-
-    height: 15vh;
-
-    object-fit: cover; /*image fits within set size, and changes what is shown at different viewports*/
+.tiles a{
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+    background: rgb(59, 59, 59);
+    border-radius: 15%;
 }
 
-/*Pseudo-class hover will increase height and width of image while adding an opacity*/
-a img:hover {
-    width: 20vw;
-
-    height: 20vh;
-
-    opacity: .7;
+.wItems{
+    padding: 5px;
+    border-style:solid;
+    
+}
+.wItems :hover {
+    gap: 1.5%;
 }
 
-/*footer links */
-.links {
-    width:70%;
-
-    display: flex;
-
-    justify-content: space-around;
-
-    align-content: center;
-
-    align-items: center;
-
-    margin-right: 2vw;
+.tiles a:hover {
+    color: rgb(0, 0, 0);
+    font-size: 3.0vh;
+    font-weight: bolder;
+    background: rgb(118, 157, 207);
+    border-radius: 20%;
+    
 }
 
 /* changing settings when screen is smaller than 450px */
@@ -189,27 +156,23 @@ a img:hover {
         font-size: 3.2vw;
     }
 
-    .links li a:hover, .menu li a:hover {
+    .links li a:hover,{
         font-size: 3.5vw;
-
         width: 15vw;
-
         height: auto;
-
     }
 
     h3 {
         font-size: 3.5vw;
     }
 
-    .menu, .links, .tiles {
+    .links, .tiles {
         flex-flow: column wrap;
         overflow-wrap: none;
-        width: 70%;
-
     }
 
-    .tiles ul {
+    .tiles  {
+        display: table-column;
         align-self: center;
         justify-self: center;
     }
