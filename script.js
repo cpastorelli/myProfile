@@ -18,7 +18,7 @@ const toContact = "Contact Me";
 const title3 = "My Work";
 const workItem =[
     {
-        name: "Password Generator",
+        name: "Password",
         link: "https://cpastorelli.github.io/Password-Generator/", 
         img: "./assets/images/passwordGeneratorSM.png",
         alt: "A password being generated based on certain criteria"
@@ -36,7 +36,7 @@ const workItem =[
         alt: "A timed quiz setup"
     },
     {
-        name: "Weather Dashboard",
+        name: "Weather",
         link: "https://cpastorelli.github.io/weather-Dashboard/", 
         img: "./assets/images/weatherDashboardSM.png",
         alt: "Weather dashboard showing the weather forcast for the city of Houston"
@@ -135,16 +135,34 @@ function simpleAnchor(linkTo, phrase) {
 
 function workAnchor(obj){
     let wSubCont = document.createElement("div");
-    wSubCont.className = "wItems";
+    wSubCont.className = "wItems ";
 
-    let wAnchor = simpleAnchor(obj.link, obj.name);
+    let wAnchor = divAnchor(obj.link, obj.name);
     wAnchor.setAttribute("target", "_blank");
+    wAnchor.className = "fill-div";
     
-    wSubCont.style.backgroundImage = "URL(" + obj.img + ")";
+    let wImg = setImg(obj.img, obj.alt);
+    wAnchor.append(wImg);
 
     wSubCont.append(wAnchor);
     workCont.append(wSubCont);
     workEl.append(workCont);
     
     return wSubCont;
+}
+
+function divAnchor(linkTo, phrase){
+    let dAnchor = document.createElement("a");
+    dAnchor.setAttribute("href", linkTo);
+    let hAnchor = document.createElement("p");
+    hAnchor.textContent = phrase;
+    dAnchor.append(hAnchor);
+    return dAnchor;
+}
+
+function setImg(link, alt){
+    let imgEl = document.createElement("img");
+    imgEl.setAttribute("src", link);
+    imgEl.setAttribute("alt", alt);
+    return imgEl;
 }
