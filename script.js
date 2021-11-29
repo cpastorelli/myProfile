@@ -38,7 +38,7 @@ const workItem =[
     {
         name: "Weather",
         link: "https://cpastorelli.github.io/weather-Dashboard/", 
-        img: "./assets/images/weatherDashboardSM.png",
+        img: "./assets/images/weatherDashSM.png",
         alt: "Weather dashboard showing the weather forcast for the city of Houston"
     },
     {
@@ -51,11 +51,13 @@ const workItem =[
 // Variables used in Contact Section
 const title4 = "Contact Me";
 const linkGithub = "https://github.com/cpastorelli/";
-const toGithub = "To Github";
+const toGithub = "Github";
+const linkLinkedIn = "https://www.linkedin.com/in/carolinedawespastorelli/";
+const toLinkedIn = "LinkedIn";
 const linkEmail = "mailto:caroline.pastorelli@gmail.com";
-const toEmail = "To E-mail";
-const linkPhone = "tel:+123456789";
-const toPhone = "To Phone";
+const toEmail = "E-mail";
+const linkPhone = "tel:+7604407712";
+const toPhone = "Phone";
 
 setNav();
 setWork();
@@ -110,17 +112,20 @@ function setContact(){
     let contactLi1 = document.createElement("li");
     let contactLi2 = document.createElement("li");
     let contactLi3 = document.createElement("li");
+    let contactLi4 = document.createElement("li");
 
     // 
     let contactA1 = simpleAnchor(linkGithub, toGithub);
-    let contactA2 = simpleAnchor(linkEmail, toEmail);
-    let contactA3 = simpleAnchor(linkPhone, toPhone);
+    let contactA2 = simpleAnchor(linkLinkedIn, toLinkedIn);
+    let contactA3 = simpleAnchor(linkEmail, toEmail);
+    let contactA4 = simpleAnchor(linkPhone, toPhone);
 
     // append elements to page
     contactLi1.append(contactA1);
     contactLi2.append(contactA2);
     contactLi3.append(contactA3);
-    contactUl.append(contactLi1, contactLi2, contactLi3);
+    contactLi4.append(contactA4);
+    contactUl.append(contactLi1, contactLi2, contactLi3, contactLi4);
     contactDiv.append(contactUl);
     contactEl.append(contactH, contactDiv);
 }
