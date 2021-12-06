@@ -22,8 +22,8 @@ The pseudo-class hover was a blast to work with! I played with image sizes, text
 - Coffee (Thanks Nespresso!)
 
 ### Contact 
-- project link: (https://cpastorelli.github.io/myProfile/)
-- profile link: (https://cpastorelli.github.io)
+- [Live Project Link](https://cpastorelli.github.io/myProfile/)
+- [GitHub Profile link](https://cpastorelli.github.io)
 
 ## License
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -39,3 +39,4 @@ The pseudo-class hover was a blast to work with! I played with image sizes, text
 - [Image-resizing](https://stackoverflow.com/questions/19414856/how-can-i-make-all-images-of-different-height-and-width-the-same-via-css)
 - [Centering-image-in-list-item](https://stackoverflow.com/questions/29848553/how-to-center-image-in-li-elements)
 - [ForEach](https://dmitripavlutin.com/foreach-iterate-array-javascript/)
+- [Download as PDF](https://stackoverflow.com/questions/11620698/how-to-trigger-a-file-download-when-clicking-an-html-button-or-javascript)

@@ -58,6 +58,8 @@ const linkEmail = "mailto:caroline.pastorelli@gmail.com";
 const toEmail = "E-mail";
 const linkPhone = "tel:+7604407712";
 const toPhone = "Phone";
+const linkResume = "./assets/resume/CarolinePastorelliResume.pdf";
+const toResume = "Resume (PDF)"
 
 setNav();
 setWork();
@@ -76,7 +78,7 @@ function setNav(){
     let navLi2 = document.createElement("li");
     let navLi3 = document.createElement("li");
 
-    // 
+    
     let navA1 = simpleAnchor(linkAbout, toAbout);
     let navA2 = simpleAnchor(linkWork, toWork);
     let navA3 = simpleAnchor(linkContact, toContact);
@@ -113,21 +115,26 @@ function setContact(){
     let contactLi2 = document.createElement("li");
     let contactLi3 = document.createElement("li");
     let contactLi4 = document.createElement("li");
+    let contactLi5 = document.createElement("li");
 
     // 
     let contactA1 = simpleAnchor(linkGithub, toGithub);
     let contactA2 = simpleAnchor(linkLinkedIn, toLinkedIn);
     let contactA3 = simpleAnchor(linkEmail, toEmail);
     let contactA4 = simpleAnchor(linkPhone, toPhone);
+    let contactA5 = simpleAnchor(linkResume, toResume);
+    contactA5.setAttribute("download", "CarolinePastorelli_Resume");
 
     // append elements to page
     contactLi1.append(contactA1);
     contactLi2.append(contactA2);
     contactLi3.append(contactA3);
     contactLi4.append(contactA4);
-    contactUl.append(contactLi1, contactLi2, contactLi3, contactLi4);
+    contactLi5.append(contactA5);
+    contactUl.append(contactLi1, contactLi2, contactLi3, contactLi4, contactLi5);
     contactDiv.append(contactUl);
     contactEl.append(contactH, contactDiv);
+    console.log(contactLi5);
 }
 
 function simpleAnchor(linkTo, phrase) {
