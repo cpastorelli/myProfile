@@ -139,7 +139,7 @@ h3 {
     width: 80%;
     height: 100%;
     display: grid;
-    justify-content: center;
+    justify-items: center;
     margin: 0px;
 }
 
@@ -154,6 +154,10 @@ h3 {
     color: rgb(66, 70, 105);
     font-weight: bold;
     text-align: center; 
+}
+
+.card-link::before {
+    content: "🔎";
 }
 
 /* a.fill-div {
