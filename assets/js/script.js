@@ -19,31 +19,46 @@ const title3 = "My Work";
 const workItem =[
     {
         name: "Password",
+        deployname: "Live Page",
         link: "https://cpastorelli.github.io/Password-Generator/", 
+        ghname: "Repository",
+        ghlink: "https://github.com/cpastorelli/Password-Generator",
         img: "./assets/images/passwordGeneratorSM.png",
         alt: "A password being generated based on certain criteria"
     },
     {
         name: "Day Planner",
+        deployname: "Live Page",
         link: "https://cpastorelli.github.io/day-planner/", 
+        ghname: "Repository",
+        ghlink: "https://github.com/cpastorelli/Day-Planner",
         img: "./assets/images/dayPlannerSM.png",
         alt: "A functional day planner"
     },
     {
         name: "Timed Quiz",
+        deployname: "Live Page",
         link: "https://cpastorelli.github.io/timed-quiz/", 
+        ghname: "Repository",
+        ghlink: "https://github.com/cpastorelli/timed-quiz",
         img: "./assets/images/timedQuizSM.png",
         alt: "A timed quiz setup"
     },
     {
         name: "Weather",
+        deployname: "Live Page",
         link: "https://cpastorelli.github.io/weather-Dashboard/", 
-        img: "./assets/images/weatherDashSM.png",
+        ghname: "Repository",
+        ghlink: "https://github.com/cpastorelli/weather-Dashboard",
+        img: "./assets/images/WeatherDashSM.png",
         alt: "Weather dashboard showing the weather forcast for the city of Houston"
     },
     {
         name: "Trip Planner",
+        deployname: "Live Page",
         link: "https://amdiebolt.github.io/trip-planner/", 
+        ghname: "Repository",
+        ghlink: "https://github.com/cpastorelli/trip-planner",
         img: "./assets/images/tripPlannerSM.png",
         alt: "Get weather and entertainment shows based on city searched"
     },
@@ -147,16 +162,24 @@ function simpleAnchor(linkTo, phrase) {
 
 function workAnchor(obj){
     let wSubCont = document.createElement("div");
-    wSubCont.className = "wItems ";
+    wSubCont.className = " card-body";
 
-    let wAnchor = divAnchor(obj.link, obj.name);
-    wAnchor.setAttribute("target", "_blank");
-    wAnchor.className = "fill-div";
-    
     let wImg = setImg(obj.img, obj.alt);
-    wAnchor.append(wImg);
 
-    wSubCont.append(wAnchor);
+    let wTitle = document.createElement("h5");
+    wTitle.innerText = obj.name;
+    wTitle.className = "card-title";
+
+    let wAnchor1 = simpleAnchor(obj.link, obj.deployname);
+    wAnchor1.setAttribute("target", "_blank");
+    wAnchor1.className = "card-link";
+
+    let wAnchor2 = simpleAnchor(obj.ghlink, obj.ghname);
+    wAnchor2.setAttribute("target", "_blank");
+    wAnchor2.className = "card-link";
+    
+    wSubCont.append(wImg, wTitle, wAnchor1, wAnchor2);
+    
     workCont.append(wSubCont);
     workEl.append(workCont);
     
@@ -178,3 +201,4 @@ function setImg(link, alt){
     imgEl.setAttribute("alt", alt);
     return imgEl;
 }
+
