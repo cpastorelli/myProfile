@@ -73,7 +73,7 @@ const linkEmail = "mailto:caroline.pastorelli@gmail.com";
 const toEmail = "E-mail";
 const linkPhone = "tel:+7604407712";
 const toPhone = "Phone";
-const linkResume = "./assets/resume/CarolinePastorelliResume.pdf";
+const linkResume = "./assets/resume/CarolinePastorelli_Resume.pdf";
 const toResume = "Resume (PDF)"
 
 setNav();
