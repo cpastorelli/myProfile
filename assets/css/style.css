@@ -163,7 +163,7 @@ h3 {
 }
 
 .card-link::before {
-    content: "🔎";
+    content: "🔗";
 }
 
 /* a.fill-div {

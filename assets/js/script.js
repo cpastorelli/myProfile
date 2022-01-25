@@ -190,8 +190,7 @@ function simpleAnchor(linkTo, phrase) {
 function workAnchor(obj){
     let workItems = document.createElement("div");
     workItems.className = "card";
-    // workItems.setAttribute("style","width: 12 rem;")
-
+    
     let workCard = document.createElement("div");
     workCard.className = "card-body";
 
