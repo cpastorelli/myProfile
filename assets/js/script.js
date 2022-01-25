@@ -18,7 +18,7 @@ const toContact = "Contact Me";
 const title3 = "My Work";
 const workItem =[
     {
-        name: "Password",
+        name: "Password Generator",
         deployname: "Live Page",
         link: "https://cpastorelli.github.io/Password-Generator/", 
         ghname: "Repository",
@@ -45,7 +45,7 @@ const workItem =[
         alt: "A timed quiz setup"
     },
     {
-        name: "Weather",
+        name: "Weather Dashboard",
         deployname: "Live Page",
         link: "https://cpastorelli.github.io/weather-Dashboard/", 
         ghname: "Repository",
@@ -61,6 +61,33 @@ const workItem =[
         ghlink: "https://github.com/cpastorelli/trip-planner",
         img: "./assets/images/tripPlannerSM.png",
         alt: "Get weather and entertainment shows based on city searched"
+    },
+    {
+        name: "Covid Travel Search",
+        deployname: "Live Page",
+        link: "https://intense-mesa-45226.herokuapp.com/", 
+        ghname: "Repository",
+        ghlink: "https://github.com/cpastorelli/Covid-travel-search",
+        img: "./assets/images/covidTravel.png",
+        alt: "Find Covid Travel Restrictions for countries you wish to visit"
+    },
+    {
+        name: "Team Profile Generator",
+        deployname: "Video Description",
+        link: "https://cpastorelli.github.io/Team_Profile_Generator/", 
+        ghname: "Repository",
+        ghlink: "https://github.com/cpastorelli/Team_Profile_Generator",
+        img: "./assets/images/teamProfiles.png",
+        alt: "Employee profiles for a team"
+    },
+    {
+        name: "README.md Generator",
+        deployname: "Video Description",
+        link: " https://www.screencast.com/t/FHwNjb5pBO", 
+        ghname: "Repository",
+        ghlink: "https://github.com/cpastorelli/README-Generator",
+        img: "./assets/images/nodeExample.png",
+        alt: "Sample questions from README.md Generator Program"
     },
 ] 
 // Variables used in Contact Section
@@ -161,8 +188,12 @@ function simpleAnchor(linkTo, phrase) {
 }
 
 function workAnchor(obj){
-    let wSubCont = document.createElement("div");
-    wSubCont.className = " card-body";
+    let workItems = document.createElement("div");
+    workItems.className = "card";
+    // workItems.setAttribute("style","width: 12 rem;")
+
+    let workCard = document.createElement("div");
+    workCard.className = "card-body";
 
     let wImg = setImg(obj.img, obj.alt);
 
@@ -178,12 +209,12 @@ function workAnchor(obj){
     wAnchor2.setAttribute("target", "_blank");
     wAnchor2.className = "card-link";
     
-    wSubCont.append(wImg, wTitle, wAnchor1, wAnchor2);
-    
-    workCont.append(wSubCont);
+    workCard.append(wImg, wTitle, wAnchor1, wAnchor2);
+    workItems.append(workCard);
+    workCont.append(workItems);
     workEl.append(workCont);
     
-    return wSubCont;
+    return workItems;
 }
 
 function divAnchor(linkTo, phrase){
