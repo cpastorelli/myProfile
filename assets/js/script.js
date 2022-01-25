@@ -196,7 +196,7 @@ function workAnchor(obj){
 
     let wImg = setImg(obj.img, obj.alt);
 
-    let wTitle = document.createElement("h5");
+    let wTitle = document.createElement("h4");
     wTitle.innerText = obj.name;
     wTitle.className = "card-title";
 
