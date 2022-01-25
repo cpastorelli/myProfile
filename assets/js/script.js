@@ -19,6 +19,7 @@ const title3 = "My Work";
 const workItem =[
     {
         name: "Password Generator",
+        subtitle: "Create a uniqe password",
         deployname: "Live Page",
         link: "https://cpastorelli.github.io/Password-Generator/", 
         ghname: "Repository",
@@ -28,6 +29,7 @@ const workItem =[
     },
     {
         name: "Day Planner",
+        subtitle: "Plan out your day",
         deployname: "Live Page",
         link: "https://cpastorelli.github.io/day-planner/", 
         ghname: "Repository",
@@ -37,6 +39,7 @@ const workItem =[
     },
     {
         name: "Timed Quiz",
+        subtitle: "Test your basic technology knowledge",
         deployname: "Live Page",
         link: "https://cpastorelli.github.io/timed-quiz/", 
         ghname: "Repository",
@@ -46,6 +49,7 @@ const workItem =[
     },
     {
         name: "Weather Dashboard",
+        subtitle: "Look at the weather in an area of your choice",
         deployname: "Live Page",
         link: "https://cpastorelli.github.io/weather-Dashboard/", 
         ghname: "Repository",
@@ -55,6 +59,7 @@ const workItem =[
     },
     {
         name: "Trip Planner",
+        subtitle: "Plan your trip by viewing both the weather and events",
         deployname: "Live Page",
         link: "https://amdiebolt.github.io/trip-planner/", 
         ghname: "Repository",
@@ -64,6 +69,7 @@ const workItem =[
     },
     {
         name: "Covid Travel Search",
+        subtitle: "View the country Covid restrictions",
         deployname: "Live Page",
         link: "https://intense-mesa-45226.herokuapp.com/", 
         ghname: "Repository",
@@ -73,6 +79,7 @@ const workItem =[
     },
     {
         name: "Team Profile Generator",
+        subtitle: "Create a team site",
         deployname: "Video Description",
         link: "https://cpastorelli.github.io/Team_Profile_Generator/", 
         ghname: "Repository",
@@ -82,6 +89,7 @@ const workItem =[
     },
     {
         name: "README.md Generator",
+        subtitle: "Create a readme file easily",
         deployname: "Video Description",
         link: " https://www.screencast.com/t/FHwNjb5pBO", 
         ghname: "Repository",
@@ -200,6 +208,10 @@ function workAnchor(obj){
     wTitle.innerText = obj.name;
     wTitle.className = "card-title";
 
+    let wSubtitle = document.createElement("h6");
+    wSubtitle.className = "card-subtitle"
+    wSubtitle.innerText = obj.subtitle;
+
     let wAnchor1 = simpleAnchor(obj.link, obj.deployname);
     wAnchor1.setAttribute("target", "_blank");
     wAnchor1.className = "card-link";
@@ -208,7 +220,7 @@ function workAnchor(obj){
     wAnchor2.setAttribute("target", "_blank");
     wAnchor2.className = "card-link";
     
-    workCard.append(wImg, wTitle, wAnchor1, wAnchor2);
+    workCard.append(wImg, wTitle, wSubtitle, wAnchor1, wAnchor2);
     workItems.append(workCard);
     workCont.append(workItems);
     workEl.append(workCont);
