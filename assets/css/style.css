@@ -30,7 +30,6 @@ body section {
     border: medium solid rgb(0, 0, 0); /* border shorthand for: Width: medium, Style: ridge, Color: RGB 138, 138, 138*/
     background-color: rgb(255, 255, 255);
     opacity: .90;
-    /* border-radius: 12%; */
 }
 
 /*Settings of H1 element*/
@@ -43,11 +42,11 @@ h1 {
     border-right:1px dotted whitesmoke;
 }
 
-/*Setting font size, color for anchor tags withing lists. Rounding corners of border edge.*/
-li a{   
+/*Setting font size, color for anchor tags withing lists.*/
+li a,
+nav-link{   
     color: rgb(0, 0, 0);
     font-size: 2.5vh;
-    border-radius: 10%;
     font-weight:bold;
     transition: color 1s, background 2s, font-size 2s;
 }
@@ -72,12 +71,15 @@ li a{
     margin-top: 2%;
 }
 
+.links a {
+    color:black;
+}
 /*Pseudo-class hover will change font weight, color, size and background image. transitions will go into effect */
-.links a:hover {
-    color: rgb(201, 202, 218);
+.links a:hover,
+.nav-link:hover {
     font-size: 3.0vh;
     font-weight: bolder;
-    background-color: rgb(95, 119, 170);
+    color: rgb(95, 119, 170);
 }
 
 /*Heading 3 element settings*/
@@ -96,6 +98,9 @@ h3 {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
+navbar {
+    color:black;
+}
 
 /* About me Section */
 
@@ -205,7 +210,7 @@ h3 {
 
     .card-link {
         text-decoration: none;
-        color: rgb(66, 70, 105);
+        color: rgb(0, 0, 0);
         font-size: 2.2vw;
         font-weight: bold;
         text-align: center; 
@@ -236,12 +241,6 @@ h3 {
 
     h3 {
         font-size: 3.2vw;
-    }
-
-    .navi ul, 
-    .contact ul{
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));  
     }
 
     .card-link {

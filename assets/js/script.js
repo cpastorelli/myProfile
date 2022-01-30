@@ -1,5 +1,5 @@
 // DOM Navigation by class
-const navEl = document.querySelector(".navi");
+const navEl = document.querySelector(".header");
 //const aboutEl = document.querySelector(".about-me"); //For future use?
 const workEl = document.querySelector(".my-work");
 const workCont = document.querySelector(".work-container");
@@ -121,25 +121,50 @@ function setNav(){
     navH.textContent = title1;
     
     let navSect = document.createElement("nav");
-    navSect.className = "links";
+    navSect.className = "links navbar navbar-expand-sm ";
+    
 
     let navUl = document.createElement("ul");
-    let navLi1 = document.createElement("li");
-    let navLi2 = document.createElement("li");
-    let navLi3 = document.createElement("li");
+    navUl.className = "navbar-nav collapse navbar-collapse";
+    navUl.setAttribute("id","navbarDropdown");
 
-    
+    let toggleBtn = document.createElement("button");
+    toggleBtn.className = "navbar-toggler";
+    toggleBtn.setAttribute("type","button");
+    toggleBtn.setAttribute("data-bs-toggle","collapse");
+    toggleBtn.setAttribute("data-bs-target","#navbarDropdown");
+    toggleBtn.setAttribute("aria-controls","navbarDropdown");
+    toggleBtn.setAttribute("aria-expanded","false");
+    toggleBtn.setAttribute("aria-label","Toggle navigation");
+
+    let navIcon = document.createElement("span");
+    navIcon.className = "navbar-toggler-icon";
+
+    toggleBtn.innerHTML += `<span class="navbar-toggler-icon"></span>`;
+   
+
+    let navLi1 = document.createElement("li");
+    navLi1.className = "nav-item";
+    let navLi2 = document.createElement("li");
+    navLi2.className = "nav-item";
+    let navLi3 = document.createElement("li");
+    navLi3.className = "nav-item";
+
     let navA1 = simpleAnchor(linkAbout, toAbout);
+    navA1.className = "nav-link";
     let navA2 = simpleAnchor(linkWork, toWork);
+    navA2.className = "nav-link";
     let navA3 = simpleAnchor(linkContact, toContact);
+    navA3.className = "nav-link";
 
     // append elements to page
     navLi1.append(navA1);
     navLi2.append(navA2);
     navLi3.append(navA3);
-    navUl.append(navLi1, navLi2, navLi3);
-    navSect.append(navUl);
-    navEl.append(navH, navSect);
+    navUl.append( navLi1, navLi2, navLi3);
+    navSect.append(toggleBtn, navUl);
+    // navEl.prepend(navH);
+    navEl.append(navH, navSect,);
 }
 
 // Create Work section
